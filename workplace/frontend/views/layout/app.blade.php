@@ -26,7 +26,7 @@
 						<a href="#" data-activates="slide-out" class="button-collapse waves-effect waves-light"><i
 								class="material-icons">menu</i></a>
 						<ul class="right hide-on-med-and-down">
-							<li><a href="{{ base_url() }}" class="waves-effect waves-light">Home</a></li>
+							<li class="ade"><a href="{{ base_url() }}" class="waves-effect waves-light">Home</a></li>
 							<li><a href="{{ base_url('profil') }}" class="waves-effect waves-light">Profil</a></li>
 							<li><a href="{{ base_url('ketentuan') }}" class="waves-effect waves-light">Ketentuan</a>
 							</li>
@@ -54,8 +54,8 @@
 						Jakarta 10110
 						Jl. Salemba Raya No.28A
 						Jakarta 10430
-						Whatsapp/SMS : 085717147303
-						Email : info@perpusnas.go.id</p>
+						Whatsapp/SMS : 08645763443
+						Email : silab@.go.id</p>
 				</div>
 				<div class="col l3 offset-l2 s10">
 					<h5 class="white-text">Jam Operasional</h5>

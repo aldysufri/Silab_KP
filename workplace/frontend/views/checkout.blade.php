@@ -2,8 +2,8 @@
 
 @section('content')
 <section id="breadcrumbs">
-	<nav>
-		<div class="nav-wrapper teal darken-1">
+	<nav style="background-color: #5BBCBE">
+		<div class="container">
 			<div class="col s12">
 				<a href="{{ base_url() }}" class="breadcrumb" title="Home">Home</a>
 				<a href="{{ current_url() }}" class="breadcrumb" title="Here">Checkout</a>
@@ -14,36 +14,37 @@
 
 <section id="profil">
 	@if ($data)
-<div class="row">
+	<div class="row">
 		<div class="col s12">
-			<div class="card hoverable">
+			<div class="">
 				<form action="" id="chekout" method="POST" enctype='multipart/form-data' role="form">
 					<div style="margin-left: 15px">
-					<div class="section">
-					<h5>Checkout</h5>
-					</div>
-					<div class="row">
-						<div class="input-field col s12 m10">
-							<input id="nama" name="nama" type="text" class="validate" required="">
-							<label for="name">Nama</label>
+						<div class="section" >
+								<center><h3 style="font-family: 'Poppins', sans-serif; font-weight: 700">Checkout</h3></center>
+								<p style="text-align:center">ID Peminjaman: {{ $id }}</p>
 						</div>
-						<div class="input-field col s12 m10">
-							<input id="jurusan" name="jurusan_prodi" type="text" class="validate" required="">
-							<label for="jurusan">Jurusan</label>
+						<div class="row">
+							<div class="input-field col s12 m10">
+								<input id="nama" name="nama" type="text" class="validate" required="">
+								<label for="name">Nama</label>
+							</div>
+							<div class="input-field col s12 m10">
+								<input id="jurusan" name="jurusan_prodi" type="text" class="validate" required="">
+								<label for="jurusan">Jurusan</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12 m2">
+								<input id="nip" name="nim_nip" type="text" class="validate" required="">
+								<label for="nip">NIP</label>
+							</div>
+							<div class="input-field col s12 m8">
+								<input id="nohp" name="no_hp" type="text" class="validate" required="">
+								<label for="nohp">No Telfone</label>
+							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="input-field col s12 m2">
-							<input id="nip" name="nim_nip" type="text" class="validate" required="">
-							<label for="nip">NIP</label>
-						</div>
-						<div class="input-field col s12 m8">
-							<input id="nohp" name="no_hp" type="text" class="validate" required="">
-							<label for="nohp">No Telfone</label>
-						</div>
-					</div>
-					</div>
-					<div class="card-content">
+					<div class="card-content" style="margin: 20px;">
 						<table class="bordered highlight responsive-table">
 							<thead>
 								<tr>
@@ -65,16 +66,17 @@
 									<td>{{ $a->tanggal_end }}</td>
 									<td>
 										<a href="<?php echo base_url(); ?>checkout/delete/<?php echo $a->id_barang; ?>"
-											class="btn btn red">Hapus</a>
+											class="btn btn red" style="border-radius: 20px">Hapus</a>
 									</td>
 								</tr>
 								@endforeach
 							</tbody>
 						</table>
+						<div style="padding: 10px" class="form-actions noborder"><button onclick="clickCounter()"
+								type="submit" style="background-color: #64C5C7; border-radius:20px" name="proses"
+								value="true" class="btn waves-effect waves-light">Submit</button></div>
+				</div>
 					</div>
-					<div style="padding: 10px" class="form-actions noborder"><button onclick="clickCounter()"
-						type="submit" name="proses" value="true" class="btn waves-effect waves-light">Submit</button></div>
-			</div>
 			<div id="result"></div>
 			</form>
 
@@ -102,43 +104,48 @@
 @endsection
 
 @section('css')
-	<link rel="stylesheet" type="text/css" href="{{ base_url('assets/plugins/md-picker/css/mdDateTimePicker.min.css') }}">
-	<link href="{{ base_url('assets/plugins/bootstrap-sweetalert/sweetalert.css') }}" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{{ base_url('assets/plugins/md-picker/css/mdDateTimePicker.min.css') }}">
+<link href="{{ base_url('assets/plugins/bootstrap-sweetalert/sweetalert.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 
 @section('scripts')
-	<script type="text/javascript" src="{{ base_url('assets/plugins/md-picker/js/moment.min.js') }}"></script>
-	<script type="text/javascript" src="{{ base_url('assets/plugins/md-picker/js/moment.id.js') }}"></script>
-	<script type="text/javascript" src="{{ base_url('assets/plugins/md-picker/js/scroll-into-view-if-needed.min.js') }}"></script>
-	<script type="text/javascript" src="{{ base_url('assets/plugins/md-picker/js/draggabilly.pkgd.min.js') }}"></script>
-	<script type="text/javascript" src="{{ base_url('assets/plugins/md-picker/js/mdDateTimePicker.min.js') }}"></script>
-	<script type="text/javascript" src="{{ base_url('assets/plugins/bootstrap-sweetalert/sweetalert.min.js') }}"></script>
-	
-	@if ($flash = $this->session->flashdata('flash'))
-		<script type="text/javascript">
-			jQuery(function($){
-				var title = '{{ $flash['title'] }}';
-				var text = '{{ $flash['text'] }}';
-				var type = '{{ $flash['type'] }}';
-				if (type == 'error') {
-					swal(title, text, type);
-				} else {
-					swal({
-						title: title,
-						text: text,
-						type: type,
-						confirmButtonText: "Download",
-						closeOnConfirm: false
-					}, function() {
-						window.open('{{ $flash['pdf'] }}', '_blank');
-						swal.close();
-						localStorage.removeItem("id_guest");
-						location.reload();
-					});
-				}
+<script type="text/javascript" src="{{ base_url('assets/plugins/md-picker/js/moment.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/plugins/md-picker/js/moment.id.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/plugins/md-picker/js/scroll-into-view-if-needed.min.js') }}">
+</script>
+<script type="text/javascript" src="{{ base_url('assets/plugins/md-picker/js/draggabilly.pkgd.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/plugins/md-picker/js/mdDateTimePicker.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url('assets/plugins/bootstrap-sweetalert/sweetalert.min.js') }}"></script>
+
+@if ($flash = $this->session->flashdata('flash'))
+<script type="text/javascript">
+	jQuery(function ($) {
+		var title = '{{ $flash['
+		title '] }}';
+		var text = '{{ $flash['
+		text '] }}';
+		var type = '{{ $flash['
+		type '] }}';
+		if (type == 'error') {
+			swal(title, text, type);
+		} else {
+			swal({
+				title: title,
+				text: text,
+				type: type,
+				confirmButtonText: "Download",
+				closeOnConfirm: false
+			}, function () {
+				window.open('{{ $flash['
+					pdf '] }}', '_blank');
+				swal.close();
+				localStorage.removeItem("id_guest");
+				location.reload();
 			});
-		</script>
-	@endif
+		}
+	});
+</script>
+@endif
 
 <script>
 	function clickCounter() {

@@ -1,6 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
 
-/* Fix Shadow on Latest Chrome */
+body{
+	font-family: 'Poppins', sans-serif;
+}
+
+p, a{
+	font-weight: 300;
+}
+
 .hoverable:hover {
 	transition: box-shadow .25s;
 	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 0 0 0 rgba(0, 0, 0, 0);
@@ -160,6 +167,17 @@ blockquote.info i.material-icons {
 	border-radius: 15px;
 }
 
+.card-logo h1{
+	font-weight: 700;
+	font-family: 'Poppins', sans-serif;
+}
+
+.card .card-content {
+    padding: 40px;
+    border-radius: 0 0 2px 2px;
+	margin: 25px 10px;
+}
+
 
 /* Galerry */
 .gallery {
@@ -197,7 +215,7 @@ blockquote.info i.material-icons {
 
 .ad {
 	margin: 0 245px;
-	top: 478px;
+	top: 449px;
 	position: absolute;
 }
 
@@ -215,4 +233,11 @@ blockquote.info i.material-icons {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.run{
+	background-color: rgba(209, 90, 90, 0.514);
+	position: fixed;
+	z-index: 999;
+	color: white;
 }

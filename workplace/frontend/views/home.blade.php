@@ -1,6 +1,7 @@
 @extends('layout.app')
 
 @section('content')
+<marquee class="run" width="100%" height="20">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam enim ratione voluptatibus omnis labore modi, excepturi exercitationem fuga, perspiciatis impedit cum nulla recusandae ad ut, nam sit.</marquee>
 <section id="parallax">
 	<div class="parallax-container">
 		<h1 class="header">Sistem Informasi Laboratorium</h1>
