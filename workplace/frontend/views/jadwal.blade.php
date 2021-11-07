@@ -5,7 +5,7 @@
 		<nav>
 			<div class="nav-wrapper teal darken-1">
 				<div class="col s12">
-					<a href="{{ base_url() }}" class="breadcrumb" title="Home">Home</a>
+					<a href="{{ base_url() }}" class="breadcrumb" title="Home">Beranda</a>
 					<a href="{{ current_url() }}" class="breadcrumb" title="Here">Jadwal</a>
 				</div>
 			</div>

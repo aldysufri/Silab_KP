@@ -6,7 +6,7 @@
 		<nav style="background-color: #5BBCBE">
 			<div class="container">
 				<div class="col s12">
-					<a href="{{ base_url() }}" class="breadcrumb" title="Home">Home</a>
+					<a href="{{ base_url() }}" class="breadcrumb" title="Home">Beranda</a>
 					<a href="{{ current_url() }}" class="breadcrumb" title="Here">Ketentuan</a>
 				</div>
 			</div>
