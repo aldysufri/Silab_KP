@@ -22,7 +22,10 @@
 			<nav style="background-color: #64C5C7">
 				<div class="container">
 					<div class="nav-wrapper">
-						<a href="{{ base_url() }}" class="brand-logo">SiLab</a>
+						<a href="{{ base_url() }}" class="brand-logo">
+							<span style="color:white; margin:-10px;">Si</span>
+    						<span style="color:#3036B8">Lab</span>
+						</a>
 						<a href="#" data-activates="slide-out" class="button-collapse waves-effect waves-light"><i
 								class="material-icons">menu</i></a>
 						<ul class="right hide-on-med-and-down">
