@@ -14,6 +14,7 @@ class Checkout extends MX_Controller
 	{
 		$this->load->model('mfrontend');
 		$data = array(
+			'id' 		=> $id,
 			'data'		=> $this->mfrontend->checkout('peminjaman_alat_bahan', $id)->result(),
 			'item'		=> $this->mfrontend->get_peminjaman_status($id)->result(),
 			'footer'	=> $this->mfrontend->get_web_setting('web_footer')

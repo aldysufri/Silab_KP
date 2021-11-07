@@ -2,8 +2,8 @@
 
 @section('content')
 <section id="breadcrumbs">
-	<nav>
-		<div class="nav-wrapper teal darken-1">
+	<nav style="background-color: #5BBCBE">
+		<div class="container">
 			<div class="col s12">
 				<a href="{{ base_url() }}" class="breadcrumb" title="Home">Home</a>
 				<a href="{{ current_url() }}" class="breadcrumb" title="Here">Checkout</a>
@@ -16,11 +16,12 @@
 	@if ($data)
 <div class="row">
 		<div class="col s12">
-			<div class="card hoverable">
+			<div class="">
 				<form action="" id="chekout" method="POST" enctype='multipart/form-data' role="form">
 					<div style="margin-left: 15px">
 					<div class="section">
-					<h5>Checkout</h5>
+					<center><h3 style="font-family: 'Poppins', sans-serif; font-weight: 700">Checkout</h3></center>
+					<p style="text-align:center">ID Peminjaman: {{ $id }}</p>
 					</div>
 					<div class="row">
 						<div class="input-field col s12 m10">
@@ -43,7 +44,7 @@
 						</div>
 					</div>
 					</div>
-					<div class="card-content">
+					<div class="card-content" style="margin: 20px;">
 						<table class="bordered highlight responsive-table">
 							<thead>
 								<tr>
@@ -65,7 +66,7 @@
 									<td>{{ $a->tanggal_end }}</td>
 									<td>
 										<a href="<?php echo base_url(); ?>checkout/delete/<?php echo $a->id_barang; ?>"
-											class="btn btn red">Hapus</a>
+											class="btn btn red" style="border-radius: 20px">Hapus</a>
 									</td>
 								</tr>
 								@endforeach
@@ -73,7 +74,7 @@
 						</table>
 					</div>
 					<div style="padding: 10px" class="form-actions noborder"><button onclick="clickCounter()"
-						type="submit" name="proses" value="true" class="btn waves-effect waves-light">Submit</button></div>
+						type="submit" style="background-color: #64C5C7; border-radius:20px" name="proses" value="true" class="btn waves-effect waves-light">Submit</button></div>
 			</div>
 			<div id="result"></div>
 			</form>

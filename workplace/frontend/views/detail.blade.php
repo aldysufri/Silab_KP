@@ -2,8 +2,8 @@
 
 @section('content')
 <section id="breadcrumbs">
-	<nav>
-		<div class="nav-wrapper teal darken-1">
+	<nav style="background-color: #5BBCBE">
+		<div class="container">
 			<div class="col s12">
 				<a href="{{ base_url() }}" class="breadcrumb" title="Home">Home</a>
 				<a href="{{ current_url() }}" class="breadcrumb" title="Here">Detail {{ ucwords($kategori) }}</a>
@@ -19,7 +19,7 @@
 			<div class="card hoverable">
 				@if ($kategori == 'alat')
 				<div class="card-image">
-					<img src='{{ $data[0]->foto }}'>
+					<img src='{{ base_url("assets/img/alat/".$data[0]->foto) }}' alt="">
 				</div>
 				@else
 				<div class="card-image">
@@ -46,7 +46,6 @@
 					<div class="col s12">
 						<ul class="tabs">
 							<li class="tab"><a class="active" href="#form_penggunaan">Form Penggunaan</a></li>
-							<li class="tab"><a href="#jadwal_penggunaan">Jadwal Penggunaan</a></li>
 							<li class="tab"><a href="#antrian_penggunaan">Antrian Penggunaan</a></li>
 						</ul>
 					</div>
@@ -101,59 +100,13 @@
 											</div>
 										</div>
 										<div class="row">
-										<button class="btn waves-effect waves-light" type="submit" name="proses" id="btn" value="true">Proses</button>
-										</div>
+										<button class="btn waves-effect waves-light" style="background-color: #64C5C7; border-radius:20px" type="submit" name="proses" id="btn" value="true">Proses</button>
+										<button class="btn waves-effect waves-light" style="background-color: #ff3838; border-radius:20px" onclick="history.back()">Batal</button>
 								</div>
 								</form>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div id="jadwal_penggunaan" class="col s12">
-					@if ($pengguna)
-					<div class="card hoverable">
-						<div class="card-content">
-							<span class="card-title">Jadwal Penggunaan {{ ucwords($kategori) }}</span>
-							<div class="divider with-margin"></div>
-							<table class="bordered highlight responsive-table">
-								<thead>
-									<tr>
-										<th>ID</th>
-										<th>Nama</th>
-										<th>Keperluan</th>
-										<th>Peminjaman</th>
-										<th>Pengembalian</th>
-									</tr>
-								</thead>
-								<tbody>
-									@foreach ($pengguna as $item)
-									<tr>
-										<td>{{ $item->id_peminjaman }}</td>
-										<td>{{ $item->nama }}</td>
-										<td>{{ $item->keperluan }}</td>
-										<td>{{ date('d-m-Y', strtotime($item->tanggal_start)) }}
-											{{ date('H:i', strtotime($item->jam_start)) }}</td>
-										<td>{{ date('d-m-Y', strtotime($item->tanggal_end)) }}
-											{{ date('H:i', strtotime($item->jam_end)) }}</td>
-									</tr>
-									@endforeach
-								</tbody>
-							</table>
-						</div>
-					</div>
-					@else
-					<div class="card hoverable">
-						<div class="card-content">
-							<span class="card-title">Jadwal Penggunaan {{ ucwords($kategori) }}</span>
-							<div class="divider with-margin"></div>
-							<blockquote class="info">
-								<p class="heading valign-wrapper cyan-text"><i class="material-icons">info</i>Informasi
-								</p>
-								<p>Tidak ada pengguna yang sedang menggunakan alat.</p>
-							</blockquote>
-						</div>
-					</div>
-					@endif
 				</div>
 				<div id="antrian_penggunaan" class="col s12">
 					@if ($antrian)
