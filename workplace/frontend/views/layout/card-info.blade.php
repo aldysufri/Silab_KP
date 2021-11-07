@@ -10,7 +10,7 @@
 <div class="col s12 m3">
 	<div class="card hoverable">
 		<div class="card-logo">
-			<center><h1>SiLab</h1></center>
+			<center><h1 style="padding-top: 65px;">SiLab</h1></center>
 		</div>
 		<div class="card-content">
 			<span class="card-title">{{ $lab->nama }}</span>

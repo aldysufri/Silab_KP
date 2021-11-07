@@ -45,24 +45,16 @@
 		<div class="footer">
 			<div class="row">
 				<div class="col l2 s10">
-					<h5 class="white-text">SiLab</h5>
+					<h5 class="white-text">{{ $footer->footer_description_title }}</h5>
 					<p class="grey-text text-lighten-4">{{ $footer->footer_description_content }}</p>
 				</div>
 				<div class="col l3 offset-l2 s10">
 					<h5 class="white-text">Kontak</h5>
-					<p class="grey-text text-lighten-4">Jl. Medan Merdeka Selatan No.11
-						Jakarta 10110
-						Jl. Salemba Raya No.28A
-						Jakarta 10430
-						Whatsapp/SMS : 08645763443
-						Email : silab@.go.id</p>
+					<p class="grey-text text-lighten-4">{{ $footer->footer_kontak }}</p>
 				</div>
 				<div class="col l3 offset-l2 s10">
 					<h5 class="white-text">Jam Operasional</h5>
-					<p class="grey-text text-lighten-4">Senin-Jumat 08.00 - 16.00 WIB
-						sabtu-Minggu, Cuti Bersama dan Libur Nasional Tutup
-						Pengunjung Gedung Layanan Terbatas 2000 Pemustaka Perhari
-					</p>
+					<p class="grey-text text-lighten-4">{{ $footer->footer_operasional }}</p>
 				</div>
 			</div>
 		</div>

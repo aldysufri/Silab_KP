@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
 
+
 body{
 	font-family: 'Poppins', sans-serif;
 }
@@ -159,6 +160,7 @@ blockquote.info i.material-icons {
 	font-size: 36px;
 	font-weight: 700;
 	font-family: 'Poppins', sans-serif;
+	letter-spacing: 4px;
 }
 
 /*
@@ -236,8 +238,21 @@ blockquote.info i.material-icons {
 }
 
 .run{
-	background-color: rgba(209, 90, 90, 0.514);
+	background-color: rgba(90, 132, 209, 0.514);
 	position: fixed;
 	z-index: 999;
 	color: white;
+}
+
+.news {
+   margin: 32px;
+   padding: 20px;
+   margin-top: 20px;
+   width: 391px;
+}
+
+.imgnews{
+	width: 100%;
+    padding: -7px;
+    height: 193px;
 }
