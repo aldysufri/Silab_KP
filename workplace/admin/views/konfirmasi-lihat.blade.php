@@ -22,7 +22,7 @@
 				<div class="row">
 					@if ($data->type == 'alat')
 					<div class="col-xs-12 col-sm-3">
-						<img src="{{ base_url('storage/'.$data->barang->foto_barang) }}" alt="Foto" class="img-rounded img-responsive">
+						<img src="{{ base_url('assets/img/alat/'.$data->barang->foto_barang) }}" alt="Foto" class="img-rounded img-responsive">
 					</div>
 					@endif
 					<div class="col-xs-12 col-sm-{{ ($data->type == 'alat') ? '9' : '12' }}">

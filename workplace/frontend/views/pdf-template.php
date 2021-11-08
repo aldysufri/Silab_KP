@@ -70,7 +70,7 @@
 	<table collapse="collapse" class="font-arial">
 		<tr>
 			<?php if ($data->show_kiri == 'ya') { ?>
-				<td rowspan="1"><img class="center logo" style="width:100px; height:100px;" src="<?= base_url("storage/$data->foto_kiri") ?>"></td>
+				<td rowspan="1"><img class="center logo" style="width:100px; height:100px;" src="<?= base_url("assets/img/$data->foto_kiri") ?>"></td>
 			<?php } ?>
 			<td colspan="2" class="text-center">
 				<span style="font-size: 15pt; font-weight: bold"> <?php echo ($data->title); ?> </span><br>
@@ -79,7 +79,7 @@
 			</td>
 
 			<?php if ($data->show_kanan == 'ya') { ?>
-				<td rowspan="2"><img class="center certificate" style="width:100px; height:100px;" src="<?= base_url("storage/$data->foto_kanan") ?>"></td>
+				<td rowspan="2"><img class="center certificate" style="width:100px; height:100px;" src="<?= base_url("assets/img/$data->foto_kanan") ?>"></td>
 			<?php } ?>
 		</tr>
 	</table>
