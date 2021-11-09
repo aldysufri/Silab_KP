@@ -36,56 +36,27 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="row">
-						<h4 class="form-title">External Link</h4>
-					</div>
-					<div id="repeat_link">
-						<div class="row">
-							<div class="col-xs-12 col-sm-12">
-								<div class="form-group form-md-line-input form-md-floating-label has-warning">
-									<input name="footer_link_title" type="text" class="form-control" id="footer_link_title" value="{{ $footer_link_title }}" required>
-									<label for="footer_link_title">Title</label>
-								</div>
+						<h4 class="form-title">Kontak</h4>
+						<div class="col-xs-12">
+							<div class="form-group form-md-line-input form-md-floating-label has-success">
+								<textarea id="footer_kontak_content" name="footer_kontak_content" class="form-control" rows="5" required>{{ $footer_kontak_content }}</textarea>
+								<label for="footer_kontak_content">Content</label>
 							</div>
 						</div>
-						<div id="list_url" class="row">
-							@php
-								$size = count($footer_link_content);
-								$i = 1;
-							@endphp
-							@foreach ($footer_link_content as $link)
-							<div class="url_item">
-								<div class="col-xs-12 col-sm-4">
-									<div class="form-group form-md-line-input form-md-floating-label has-warning">
-										<input name="footer_url_name[]" type="text" class="form-control" value="{{ $link->name }}" required>
-										<label>URL Name</label>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-8">
-									<div class="form-group form-md-line-input form-md-floating-label has-warning">
-										<div class="input-group">
-											<span class="input-group-addon">http://</span>
-											<div class="input-group-control">
-												<input name="footer_url_link[]" type="text" class="form-control" value="{{ $link->url }}" required>
-												<label>URL</label>
-											</div>
-											<span class="input-group-btn btn-right">
-												@if ($i != $size)
-													<button class="btn btn_delete red-intense" type="button">Delete</button>
-												@else
-													<button class="btn green-haze btn_add" type="button">Add New</button>
-												@endif
-											</span>
-										</div>
-									</div>
-								</div>
+					</div>
+
+					<div class="row">
+						<h4 class="form-title">Jam Operasional</h4>
+						<div class="col-xs-12">
+							<div class="form-group form-md-line-input form-md-floating-label has-success">
+								<textarea id="footer_operasional_content" name="footer_operasional_content" class="form-control" rows="5" required>{{ $footer_operasional_content }}</textarea>
+								<label for="footer_operasional_content">Content</label>
 							</div>
-							@php
-								$i++
-							@endphp
-							@endforeach
 						</div>
 					</div>
+
 				</div>
 				<div class="form-actions noborder">
 					<button type="submit" class="btn blue">Submit</button>
@@ -115,7 +86,7 @@
 @section('page-scripts')
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
 	<script src="{{ base_url('assets/plugins/bootstrap-sweetalert/sweetalert.min.js') }}" type="text/javascript"></script>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		jQuery(function($) {
 			$('body').on('click', '.btn_add', function() {
 				$(this).text('Delete').removeClass('btn_add green-haze').addClass('btn_delete red-intense');
@@ -132,7 +103,7 @@
 				$('#list_url').find('.form-control.focus').removeClass('focus');
 			});
 		});
-	</script>
+	</script> -->
 	@if ($flash = $this->session->flashdata('flash'))
 		<script type="text/javascript">
 			jQuery(function($){

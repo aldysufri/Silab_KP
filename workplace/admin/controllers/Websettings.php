@@ -155,31 +155,32 @@ class Websettings extends MX_Controller {
 
 	public function web_footer()
 	{
-		$this->slice->set((array) $this->madmin->get_web_setting('web_footer'))
-			->view('web-footer');
+		$this->slice->set((array) $this->madmin->get_web_setting('web_footer'))->view('web-footer');
 	}
 
 	public function web_footer_store()
 	{
 		if (!$this->input->post()) redirect(base_url('dashboard/web-footer'));
 
-		$links = (object) array(
-			'name'	=> $this->input->post('footer_url_name'),
-			'url'	=> $this->input->post('footer_url_link')
-			);
+		// $links = (object) array(
+		// 	'name'	=> $this->input->post('footer_url_name'),
+		// 	'url'	=> $this->input->post('footer_url_link')
+		// 	);
 
-		for ($i = 0; $i < count($links->name); $i++) :
-			$link_content[$i] = array(
-				'name'	=> $links->name[$i],
-				'url'	=> "{$links->url[$i]}"
-				);
-		endfor;
+		// for ($i = 0; $i < count($links->name); $i++) :
+		// 	$link_content[$i] = array(
+		// 		'name'	=> $links->name[$i],
+		// 		'url'	=> "{$links->url[$i]}"
+		// 		);
+		// endfor;
 
 		$data = array(
 			'footer_description_title'		=> $this->input->post('footer_description_title'),
 			'footer_description_content'	=> $this->input->post('footer_description_content'),
-			'footer_link_title'				=> $this->input->post('footer_link_title'),
-			'footer_link_content'			=> $link_content
+			'footer_kontak_content'			=> $this->input->post('footer_kontak_content'),
+			'footer_operasional_content'	=> $this->input->post('footer_operasional_content'),
+			// 'footer_link_title'				=> $this->input->post('footer_link_title'),
+			// 'footer_link_content'			=> $link_content
 			);
 
 		$update = $this->madmin->web_setting_store('web_footer', json_encode($data));

@@ -53,11 +53,11 @@
 				</div>
 				<div class="col l3 offset-l2 s10">
 					<h5 class="white-text">Kontak</h5>
-					<p class="grey-text text-lighten-4">{{ $footer->footer_kontak }}</p>
+					<p class="grey-text text-lighten-4">{{ $footer->footer_kontak_content }}</p>
 				</div>
 				<div class="col l3 offset-l2 s10">
 					<h5 class="white-text">Jam Operasional</h5>
-					<p class="grey-text text-lighten-4">{{ $footer->footer_operasional }}</p>
+					<p class="grey-text text-lighten-4">{{ $footer->footer_operasional_content }}</p>
 				</div>
 			</div>
 		</div>
