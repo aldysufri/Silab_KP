@@ -120,27 +120,12 @@
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a href="#!" class="nav-link nav-toggle">
-								<i class="icon-list"></i>
+							<a href="{{ base_url('dashboard/stok') }}" class="nav-link nav-toggle">
+								<i class="icon-notebook"></i>
 								<span class="title">Stok</span>
-								<span class="arrow"></span>
 							</a>
-							<ul class="sub-menu">
-								<li><a href="{{ base_url('dashboard/stok') }}"><i class="fa fa-angle-double-right"></i>Stok</a></li>
-								<li class="nav-item">
-										<a href="#!" class="nav-link nav-toggle">
-											<i class="icon-list"></i>
-											<span class="title">Laporan</span>
-											<span class="arrow"></span>
-										</a>
-										<ul class="sub-menu">
-											<li><a href="{{ base_url('dashboard/laporan-alat') }}"><i class="fa fa-angle-double-right"></i>laporan Alat</a></li>
-											<li><a href="{{ base_url('dashboard/laporan-bahan') }}"><i class="fa fa-angle-double-right"></i>Laporan Bahan</a>
-											<li><a href="{{ base_url('dashboard/laporan-transaksi') }}"><i class="fa fa-angle-double-right"></i>Laporan Transaksi</a></li>
-										</ul>
-									</li>
-							</ul>
 						</li>
+						
 						<li class="nav-item">
 							<a href="#!" class="nav-link nav-toggle">
 								<i class="icon-calendar"></i>
@@ -228,7 +213,7 @@
 		<!-- END CONTAINER -->
 		<!-- BEGIN FOOTER -->
 		<div class="page-footer">
-			<div class="page-footer-inner">{{ date('Y') }} &copy; SiLab by <a href="http://techarea.co.id/" target="_blank" style="color: inherit;"><strong>Tech</strong>area</a>.</div>
+			<div class="page-footer-inner">{{ date('Y') }} &copy; SiLab</div>
 			<div class="scroll-to-top"><i class="icon-arrow-up"></i></div>
 		</div>
 		<!-- END FOOTER -->
