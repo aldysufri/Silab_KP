@@ -126,7 +126,7 @@
 							</a>
 						</li>
 						
-						<li class="nav-item">
+						<!-- <li class="nav-item">
 							<a href="#!" class="nav-link nav-toggle">
 								<i class="icon-calendar"></i>
 								<span class="title">Penjadwalan</span>
@@ -136,7 +136,7 @@
 								<li><a href="{{ base_url('dashboard/penjadwalan-baru') }}"><i class="fa fa-angle-double-right"></i>Buat Baru</a></li>
 								<li><a href="{{ base_url('dashboard/penjadwalan-semua') }}"><i class="fa fa-angle-double-right"></i>Semua Jadwal</a></li>
 							</ul>
-						</li>
+						</li> -->
 
 						<li class="nav-item">
 							<a href="#!" class="nav-link nav-toggle">
