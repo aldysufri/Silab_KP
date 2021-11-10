@@ -9,13 +9,6 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="{{ base_url("assets/css/login.css") }}">
-
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	<![endif]-->
 </head>
 <body>
 	<div class="fullscreen container-fluid">
@@ -52,7 +45,6 @@
 				</div>
 				<div class="footer">
 					<div class="pull-left"><a href="{{ base_url() }}">Back to Home</a></div>
-					<div class="pull-right">&copy; {{ date('Y') }} SiLab by <a href="http://techarea.co.id/" target="_blank" style="color: inherit;"><strong>Tech</strong>area</a>.</div>
 				</div>
 			</div>
 		</div>
